@@ -1,0 +1,21 @@
+{
+  "name": "better_auth_issue",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "check": "turbo run check"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4"
+  },
+  "trustedDependencies": [
+    "@biomejs/biome"
+  ],
+  "dependencies": {
+    "turbo": "^2.3.3"
+  },
+  "packageManager": "bun@1.2.2"
+}

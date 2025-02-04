@@ -1,0 +1,53 @@
+{
+	"name": "@better_auth_issue/server",
+	"private": true,
+	"module": "src/index.ts",
+	"type": "module",
+	"scripts": {
+		"start": "bun src/index.ts",
+		"dev": "bun --watch src/index.ts",
+		"db:pull": "drizzle-kit pull",
+		"db:push": "drizzle-kit push",
+		"db:check": "drizzle-kit check",
+		"db:generate": "bunx --bun drizzle-kit generate",
+		"db:migrate": "bun run scripts/migrate.ts",
+		"db:drop": "drizzle-kit drop",
+		"db:studio": "bunx --bun drizzle-kit studio",
+		"format": "biome format",
+		"format:write": "biome format --write",
+		"lint": "biome lint",
+		"lint:write": "biome lint --write",
+		"check": "biome check"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@types/bun": "^1.2.2",
+		"@types/pg": "^8.11.11",
+		"drizzle-kit": "^0.30.4"
+	},
+	"peerDependencies": {
+		"typescript": "^5.7.3"
+	},
+	"dependencies": {
+		"@elysiajs/cors": "^1.2.0",
+		"@elysiajs/static": "^1.2.0",
+		"@elysiajs/swagger": "^1.2.0",
+		"@libsql/client": "^0.14.0",
+		"@sinclair/typebox": "^0.34.15",
+		"@tqman/nice-logger": "^1.1.1",
+		"better-auth": "^1.1.15",
+		"better-sqlite3": "^11.8.1",
+		"drizzle-orm": "^0.39.1",
+		"drizzle-typebox": "^0.2.1",
+		"elysia": "^1.2.11",
+		"elysia-ip": "^1.0.8",
+		"pg": "^8.13.1",
+		"picocolors": "^1.1.1"
+	},
+	"trustedDependencies": [
+		"@biomejs/biome"
+	],
+	"exports": {
+		".": "./src/exports.ts"
+	}
+}
