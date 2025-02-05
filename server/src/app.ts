@@ -8,11 +8,11 @@ import { api } from "./api";
 
 export const app = new Elysia()
 	.onError(({ code, error }) => {
-	console.log(code, error)
-		return "I'm a teapot"
+	 console.log(code, error)
+		return error
 	})
 	.use(cors())
 	.use(swagger())
 	.use(logger())
-	.use(staticPlugin({ prefix: "/" }))
+	// 	.use(staticPlugin({ prefix: "/" }))
 	.use(api);

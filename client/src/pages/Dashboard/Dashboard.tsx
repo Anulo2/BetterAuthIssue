@@ -17,7 +17,7 @@ function Dashboard() {
     return <>Loading...</>;
   }
 
-  return <>Welcome {JSON.stringify(data)}</>;
+  return <>Welcome {JSON.stringify(session)}</>;
 }
 
 export default Dashboard;
