@@ -1,4 +1,4 @@
-import { drizzle } from 'drizzle-orm/bun-sql';
+import { drizzle } from 'drizzle-orm/bun-sqlite';
 import { env } from "../env";
 import * as schema from "./schema.ts";
 

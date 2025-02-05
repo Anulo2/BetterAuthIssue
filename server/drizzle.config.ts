@@ -4,13 +4,11 @@ import { env } from "./src/env";
 
 const dbCredentials = {
 	url: env.DATABASE_URL,
-	authToken: env.DATABASE_AUTH_TOKEN,
 };
 
 export default {
 	dbCredentials,
-	// dialect: "sqlite",
-	dialect: "postgresql",
+	dialect: "sqlite",
 
 	out: "./drizzle",
 	breakpoints: true,

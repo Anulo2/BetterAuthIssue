@@ -10,7 +10,7 @@
 		"db:push": "drizzle-kit push",
 		"db:check": "drizzle-kit check",
 		"db:generate": "bunx --bun drizzle-kit generate",
-		"db:migrate": "bun run scripts/migrate.ts",
+		"db:migrate": "bunx --bun drizzle-kit migrate",
 		"db:drop": "drizzle-kit drop",
 		"db:studio": "bunx --bun drizzle-kit studio",
 		"format": "biome format",
@@ -39,7 +39,7 @@
 		"better-sqlite3": "^11.8.1",
 		"drizzle-orm": "^0.39.1",
 		"drizzle-typebox": "^0.2.1",
-		"elysia": "^1.2.11",
+		"elysia": "^1.2.12",
 		"elysia-ip": "^1.0.8",
 		"pg": "^8.13.1",
 		"picocolors": "^1.1.1"

@@ -2,7 +2,6 @@ import { betterAuth } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
 import { db } from "../../db";
 import { account, session, user, verification } from "../../db/auth-schema";
-import { phoneNumber } from "better-auth/plugins";
 import { env } from "../../env";
 
 const trustedOrigins = [
@@ -14,8 +13,7 @@ const trustedOrigins = [
 export const auth = betterAuth({
   trustedOrigins,
   database: drizzleAdapter(db, {
-
-    provider: "pg",
+    provider: "sqlite",
     schema: {
       user,
       session,
@@ -24,9 +22,7 @@ export const auth = betterAuth({
     },
   }),
   user: {
-    additionalFields: {
-
-    },
+    additionalFields: {},
   },
   emailAndPassword: {
     enabled: true,
